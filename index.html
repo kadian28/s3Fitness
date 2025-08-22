@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <title> s3 | Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>The Gym | About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+        <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+        <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="../use.fontawesome.com/releases/v5.4.1/css/all.css"
+            integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <style>
+            .fa1 {
+                font-size: 13px;
+                padding: 15px;
+                color: white;
+                background-color: #fd3c3d;
+                border-radius: 50%;
+                text-align: center;
+            }
+
+            .fa2 {
+                font-size: 40px;
+            }
+
+            #topbtn {
+                position: fixed;
+                bottom: 40px;
+                right: 40px;
+                font-size: 50px;
+                display: none;
+                color: #fd3c3d;
+                background-color: black;
+                border-radius: 10%;
+            }
+
+            .bg1 {
+                background-image: url("img/gym-classes.jpg");
+                width: 100%;
+                height: 400px;
+                background-size: 100% 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class=" container-fluid p-2  " style="background-color:  rgb(106, 113, 175)">
+        <div class="container " style="background-color: rgb(252, 250, 250)">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(255, 255, 255)">
+                <a class="navbar-brand" href="index.html"><img src="img/s3fitness.jpg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" navbar-collapse justify-content-end p-2  ">
+                    <ul class="navbar-nav d-flex ml-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="about-gym.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="find-gym.html">FIND GYM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="classes.html">CLASSES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="membership.html">MEMBERSHIP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="franchise.html">FRANCHISE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-black" href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div>
+
+        <div class="carousel-inner">
+            <div class="col ma">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/9btgsq8rpgE?si=exwReItlUW8TCA3S"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center" style="color:#fd3c3d;">WELCOME TO s3 Fitness</h2>
+        <p class="text-center font-italic" style="font-size:20px;">Your body is your lasting foundation—build it with
+            care.</p>
+    </div>
+    <div class="container-fluid py-3">
+        <div class="row py-1">
+             <div class="col-sm-4 ma">
+                <h4 class="text-center">STRENGTH</h4>
+                <img src="img/the-gym-strength.jpg" alt="" width="100%">
+
+            </div>
+            <div class="col-sm-4 ma">
+                <h4 class="text-center">AEROBCS</h4>
+                <img src="img/the-gym-aerobic.jpg" alt="" width="100%">
+
+            </div>
+           
+            <div class="col-sm-4">
+                <h4 class="text-center">KICK BOXING</h4>
+                <img src="img/the-gym-kikboxing.jpg" alt="" width="100%">
+
+            </div>
+        </div>
+        <div class="row w-1">
+            <div class="col-sm-4 ma">
+                <img src="img/thegym-bhangrayour.jpg" alt="" width="100%" height="499">
+            </div>
+            <div class="col-sm-8 ma">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/sXJVMNVicy0?si=3N0aXCpvc0LRqfI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 ma">
+                <img src="img/the-gym-zumba.jpg" alt="" width="100%">
+                <h4 class="text-center">ZUMBA</h4>
+            </div>
+            <div class="col-sm-4 ma">
+                <img src="img/the-gym-power-yoga.jpg" alt="" width="100%">
+                <h4 class="text-center">POWER YOGA</h4>
+            </div>
+           
+             <div class="col-sm-4 ma">
+                <img src="img/the-gym-free-weight.jpg" alt="" width="100%">
+                <h4 class="text-center">FREE WEIGHTS</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-light" style="background-color:rgb(199, 190, 190);margin:0">
+        <div class="row">
+            <div class="col-sm-7 py-2">
+                <h2 class="mt-3" style="color:#d24444;">OUR STORY</h2>
+                <p class="text-justify text-black" style="font-size:30px;">
+                    s3 Fitness, brought to life by founder Sudhir & Subhash’s vision that a healthy lifestyle elevates
+                    every aspect of life, is now open in Badli and ready to welcome you.
+
+                    Imagine a classy, private sanctuary, where every workout is guided by professionals who bring expert
+                    care, genuine warmth, and joyful dedication.
+
+                    Whether you’re stepping in for the first time or aiming for the next level, here you’ll find focused
+                    training, elegant ambiance, and a team eager to support your wellness journey.
+
+                    Experience fitness redefined—one private session, personalized goal, and confident stride at a time.
+                </p>
+            </div>
+            <div class="col-sm-5">
+                <img src="img/Image.jpg" alt="" width="100%" height="auto">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+    <div class="container-fluid py-5 mt-3" style="background-color:rgb(199, 190, 190);">
+        <div class="container text-light text-black">
+            <h2 class="text-center text-danger">OUR ADVANTAGES</h2>
+            <div class="row py-3">
+                <div class="col-sm-6">
+                    <h4>Qualified trainers</h4>
+                    <p>You’ve likely found yourself inspired by the way a skilled trainer guides a class and captures
+                        attention. Along the way, you may have picked up on the qualities that distinguish exceptional
+                        trainers and formed your own idea of what makes them truly effective.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Individual training</h4>
+                    <p>Personal trainers are qualified fitness professionals who specialize in creating and supervising
+                        exercise programs. Their role goes beyond instruction—they encourage clients, track progress,
+                        and ensure accountability to help them reach their health and fitness goals.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Multiple classis</h4>
+                    <p>Our clients can choose from multiple engaging classes such as Zumba, Aerobics, Kickboxing,
+                        Strength, Power Yoga, and Free Weight training.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Hightech gym</h4>
+                    <p>During every workout session, performance is tracked using the latest technology, including
+                        wearables, cardio devices, and projection screens. This ensures accuracy, motivation, and a more
+                        engaging fitness experience.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Men and Women's changing rooms</h4>
+                    <p>Enjoy dedicated, secure changing spaces designed for both comfort and privacy. With luxurious
+                        locker facilities, soft lighting, and a clean, serene ambiance, our changing rooms let you
+                        refresh and recharge before and after your workout.</p>
+                </div>
+
+                <div class="col-sm-6">
+                    <h4>Free Wi-Fi Zone</h4>
+                    <p>Stay connected at every step. Enjoy fast, complimentary Wi-Fi in all member areas— perfect for
+                        streaming workouts, catching up on messages, or tracking your fitness goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center py-5">
+        <h2 class="text-danger">Why s3 Fitness </h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="img/icon-support.png" alt="" class="py-3">
+                <h5>Support</h5>
+                <p>Every new member receives a complimentary personalized Get Started Plan. Our trained and friendly
+                    staff are here to guide you at every step of your fitness journey, providing as much support as you
+                    need.</p>
+                <hr style="background-color:black;">
+            </div>
+            <div class="col-sm-6 vl">
+                <img src="img/icon-tools-training.png" alt="" class="py-3">
+                <h5>Tools & Training</h5>
+                <p>Achieving better health goes beyond just showing up at the gym. That’s why we provide personal
+                    training and classes in-house, along with the right tools to help you stay consistent even outside
+                    the gym.</p>
+                <hr style="background-color:black;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="img/icon-convenience.png" alt="" class="py-3">
+                <h5>Convenience</h5>
+                <p>With 24/7 access , you’re joining one of the most convenient
+                    fitness communities on the planet. No matter where life takes you, your health and fitness are
+                    always within reach.</p>
+            </div>
+            <div class="col-sm-6 vl">
+                <img src="img/icon-community.png" alt="" class="py-3">
+                <h5>Community</h5>
+                <p>Joining us means more than access to equipment. You’ll be surrounded by a community of like-minded
+                    individuals ready to cheer you on every step of the way.</p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------Join Us Form----------------------------->
+    <div class="container-fluid  py-5" style="background-color: rgb(199, 190, 190);">
+        <div class="container text-light">
+            <h2 class="text-center text-black">1 DAY FREE TRIAL</h2>
+            <div class="row py-3">
+                <div class="col-sm-12 text-uppercase">
+                    <form id="my_form" onsubmit="submitForm(); return false;">
+                        <div class="row">
+                            <div class="form-group text-black col-lg-4">
+                                <label for="Name">Name:</label>
+                                <input id="n" class="form-control" type="text" required autocomplete="off"
+                                    style="border-radius:0;font-size: 14px;">
+                            </div>
+                            <div class="form-group text-black col-lg-4">
+                                <label for="email">Email:</label>
+                                <input id="e" class="form-control text" type="email" required autocomplete="off"
+                                    style="border-radius:0;font-size: 14px;">
+                            </div>
+                            <div class="form-group text-black col-lg-4">
+                                <label for="email">Contact:</label>
+                                <input id="c" class="form-control" type="number" required autocomplete="off"
+                                    style="border-radius:0;font-size: 14px;">
+                            </div>
+                        </div>
+                        <div class="form-group text-black">
+                            <label for="pwd">Address:</label>
+                            <textarea id="m" class="form-control" rows="4" required autocomplete="off"
+                                style="border-radius:0;font-size: 14px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div id="recaptcha" class="g-recaptcha"
+                                data-sitekey="6LdF0KIUAAAAAAc42aozG1XiqxgYviujBT12eHy_"></div>
+                            <span id="msg-error"></span>
+                        </div>
+                        <button id="mybtn" type="submit" class="btn btn-primary me-md-2"
+                            style="border-radius: 0; border: none;">JOIN TODAY</button>
+                        <span id="status"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <i class="fa fa-arrow-circle-up" id="topbtn"></i>
+    </div>
+    <script>
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topbtn').fadeIn();
+                }
+                else {
+                    $('#topbtn').fadeOut();
+                }
+            });
+            $('#topbtn').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 800);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#news-slider2").owlCarousel({
+                items: 3,
+                itemsDesktop: [1199, 2],
+                itemsDesktopSmall: [980, 2],
+                itemsMobile: [600, 1],
+                pagination: false,
+                navigationText: false,
+                autoPlay: true
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#news-slider3").owlCarousel({
+                items: 3,
+                itemsDesktop: [1199, 2],
+                itemsDesktopSmall: [980, 2],
+                itemsMobile: [600, 1],
+                pagination: false,
+                navigationText: false,
+                autoPlay: true
+            });
+        });
+    </script>
+    </script>
+    <script>
+        $('#mybtn').click(function () {
+            var $recaptcha = document.querySelector('#g-recaptcha-response');
+            if ($recaptcha) {
+                $recaptcha.setAttribute("required", "required");
+                $("#msg-error").html("you must click on the check box");
+            }
+        })
+    </script>
+    <script>
+        function _(id) { return document.getElementById(id); }
+        function submitForm() {
+            _("mybtn").disabled = true;
+            _("status").innerHTML = 'please wait ...';
+            var formdata = new FormData();
+            formdata.append("n", _("n").value);
+            formdata.append("e", _("e").value);
+            formdata.append("c", _("c").value);
+            formdata.append("m", _("m").value);
+
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("POST.html", "jointoday.html");
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                    if (ajax.responseText == "success") {
+                        _("my_form").innerHTML = '<h2>Thanks ' + _("n").value + ', your message has been sent.</h2>';
+                    } else {
+                        _("status").innerHTML = ajax.responseText;
+                        _("mybtn").disabled = false;
+                    }
+                }
+            }
+            ajax.send(formdata);
+        }
+    </script>
+</body>
+
+<!-- Mirrored from www.thegym.in/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Aug 2025 08:15:32 GMT -->
+
+</html>
