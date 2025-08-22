@@ -7,6 +7,27 @@
 
     <!-- Bootstrap JS (with Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("-VB9IyiRDB36CwteS"); // 🔑 Replace with your Public Key from EmailJS
+        })();
+
+        function submitForm() {
+            document.getElementById("mybtn").disabled = true;
+            document.getElementById("status").innerHTML = "⏳ Sending...";
+
+            emailjs.sendForm("service_2prcxwb", "template_3fhp9vr", "#my_form")
+                .then(function () {
+                    document.getElementById("status").innerHTML = "✅ Your message has been sent successfully!";
+                    document.getElementById("mybtn").disabled = false;
+                    document.getElementById("my_form").reset();
+                }, function (error) {
+                    document.getElementById("status").innerHTML = "❌ Failed to send: " + JSON.stringify(error);
+                    document.getElementById("mybtn").disabled = false;
+                });
+        }
+    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -146,7 +167,7 @@
     </div>
     <div class="container-fluid py-3">
         <div class="row py-1">
-             <div class="col-sm-4 ma">
+            <div class="col-sm-4 ma">
                 <h4 class="text-center">STRENGTH</h4>
                 <img src="img/the-gym-strength.jpg" alt="" width="100%">
 
@@ -156,7 +177,7 @@
                 <img src="img/the-gym-aerobic.jpg" alt="" width="100%">
 
             </div>
-           
+
             <div class="col-sm-4">
                 <h4 class="text-center">KICK BOXING</h4>
                 <img src="img/the-gym-kikboxing.jpg" alt="" width="100%">
@@ -168,7 +189,10 @@
                 <img src="img/thegym-bhangrayour.jpg" alt="" width="100%" height="499">
             </div>
             <div class="col-sm-8 ma">
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/sXJVMNVicy0?si=3N0aXCpvc0LRqfI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/sXJVMNVicy0?si=3N0aXCpvc0LRqfI1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
         <div class="row">
@@ -180,8 +204,8 @@
                 <img src="img/the-gym-power-yoga.jpg" alt="" width="100%">
                 <h4 class="text-center">POWER YOGA</h4>
             </div>
-           
-             <div class="col-sm-4 ma">
+
+            <div class="col-sm-4 ma">
                 <img src="img/the-gym-free-weight.jpg" alt="" width="100%">
                 <h4 class="text-center">FREE WEIGHTS</h4>
             </div>
@@ -300,34 +324,39 @@
             <h2 class="text-center text-black">1 DAY FREE TRIAL</h2>
             <div class="row py-3">
                 <div class="col-sm-12 text-uppercase">
+
                     <form id="my_form" onsubmit="submitForm(); return false;">
                         <div class="row">
                             <div class="form-group text-black col-lg-4">
-                                <label for="Name">Name:</label>
-                                <input id="n" class="form-control" type="text" required autocomplete="off"
+                                <label for="n">Name:</label>
+                                <input id="n" name="name" class="form-control" type="text" required autocomplete="off"
                                     style="border-radius:0;font-size: 14px;">
                             </div>
                             <div class="form-group text-black col-lg-4">
-                                <label for="email">Email:</label>
-                                <input id="e" class="form-control text" type="email" required autocomplete="off"
+                                <label for="e">Email:</label>
+                                <input id="e" name="email" class="form-control" type="email" required autocomplete="off"
                                     style="border-radius:0;font-size: 14px;">
                             </div>
                             <div class="form-group text-black col-lg-4">
-                                <label for="email">Contact:</label>
-                                <input id="c" class="form-control" type="number" required autocomplete="off"
-                                    style="border-radius:0;font-size: 14px;">
+                                <label for="c">Contact:</label>
+                                <input id="c" name="contact" class="form-control" type="number" required
+                                    autocomplete="off" style="border-radius:0;font-size: 14px;">
                             </div>
                         </div>
+
                         <div class="form-group text-black">
-                            <label for="pwd">Address:</label>
-                            <textarea id="m" class="form-control" rows="4" required autocomplete="off"
+                            <label for="m">Address:</label>
+                            <textarea id="m" name="address" class="form-control" rows="4" required autocomplete="off"
                                 style="border-radius:0;font-size: 14px;"></textarea>
                         </div>
+
+                        <!-- Optional reCAPTCHA (EmailJS does not verify it automatically) -->
                         <div class="form-group">
                             <div id="recaptcha" class="g-recaptcha"
                                 data-sitekey="6LdF0KIUAAAAAAc42aozG1XiqxgYviujBT12eHy_"></div>
                             <span id="msg-error"></span>
                         </div>
+
                         <button id="mybtn" type="submit" class="btn btn-primary me-md-2"
                             style="border-radius: 0; border: none;">JOIN TODAY</button>
                         <span id="status"></span>
@@ -337,102 +366,8 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <i class="fa fa-arrow-circle-up" id="topbtn"></i>
-    </div>
-    <script>
-        $('.count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
-    </script>
-    <script>
-        $(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 40) {
-                    $('#topbtn').fadeIn();
-                }
-                else {
-                    $('#topbtn').fadeOut();
-                }
-            });
-            $('#topbtn').click(function () {
-                $('html,body').animate({ scrollTop: 0 }, 800);
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#news-slider2").owlCarousel({
-                items: 3,
-                itemsDesktop: [1199, 2],
-                itemsDesktopSmall: [980, 2],
-                itemsMobile: [600, 1],
-                pagination: false,
-                navigationText: false,
-                autoPlay: true
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("#news-slider3").owlCarousel({
-                items: 3,
-                itemsDesktop: [1199, 2],
-                itemsDesktopSmall: [980, 2],
-                itemsMobile: [600, 1],
-                pagination: false,
-                navigationText: false,
-                autoPlay: true
-            });
-        });
-    </script>
-    </script>
-    <script>
-        $('#mybtn').click(function () {
-            var $recaptcha = document.querySelector('#g-recaptcha-response');
-            if ($recaptcha) {
-                $recaptcha.setAttribute("required", "required");
-                $("#msg-error").html("you must click on the check box");
-            }
-        })
-    </script>
-    <script>
-        function _(id) { return document.getElementById(id); }
-        function submitForm() {
-            _("mybtn").disabled = true;
-            _("status").innerHTML = 'please wait ...';
-            var formdata = new FormData();
-            formdata.append("n", _("n").value);
-            formdata.append("e", _("e").value);
-            formdata.append("c", _("c").value);
-            formdata.append("m", _("m").value);
 
-
-            var ajax = new XMLHttpRequest();
-            ajax.open("POST.html", "jointoday.html");
-            ajax.onreadystatechange = function () {
-                if (ajax.readyState == 4 && ajax.status == 200) {
-                    if (ajax.responseText == "success") {
-                        _("my_form").innerHTML = '<h2>Thanks ' + _("n").value + ', your message has been sent.</h2>';
-                    } else {
-                        _("status").innerHTML = ajax.responseText;
-                        _("mybtn").disabled = false;
-                    }
-                }
-            }
-            ajax.send(formdata);
-        }
-    </script>
 </body>
 
-<!-- Mirrored from www.thegym.in/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Aug 2025 08:15:32 GMT -->
 
 </html>
