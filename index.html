@@ -329,38 +329,39 @@
                     <form id="my_form" onsubmit="submitForm(); return false;">
                         <div class="row">
                             <div class="form-group text-black col-lg-4">
-                                <label for="n">Name:</label>
+                                <label for="n" class="mb-1">Name:</label>
                                 <input id="n" name="name" placeholder="Name" class="form-control" type="text" required autocomplete="off"
                                     style="border: radius 8px;;font-size: 14px;">
                             </div>
                             <div class="form-group text-black col-lg-4">
-                                <label for="e">Email Address:</label>
+                                <label for="e" class="mb-1" >Email Address:</label>
                                 <input id="e" name="email" class="form-control" placeholder="Email" type="email" required autocomplete="off"
                                     style="border: radius 8px;;font-size: 14px;">
                             </div>
                             <div class="form-group text-black col-lg-4">
-                                <label for="c">Contact:</label>
+                                <label for="c" class="mb-1">Contact:</label>
                                 <input id="c" name="contact" class="form-control" placeholder="contact Number" type="number" required
                                     autocomplete="off" style="border: radius 8px;;font-size: 14px;">
                             </div>
                         </div>
 
-                        <div class="form-group text-black">
-                            <label for="m">Address:</label>
+                        <div class="form-group text-black mb-1 mt-3">
+                            <label for="m" class="mb-1">Address:</label>
                             <textarea id="m" name="address" class="form-control" rows="4" placeholder="Address" required autocomplete="off"
                                 style="border: radius 8px;;font-size: 14px;"></textarea>
                         </div>
 
                         <!-- Optional reCAPTCHA (EmailJS does not verify it automatically) -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <div id="recaptcha" class="g-recaptcha"
                                 data-sitekey="6LdF0KIUAAAAAAc42aozG1XiqxgYviujBT12eHy_"></div>
                             <span id="msg-error"></span>
-                        </div>
-
-                        <button id="mybtn" type="submit" class="btn btn-primary me-md-2"
-                            style="border-radius: 0; border: none;">JOIN TODAY</button>
+                        </div> -->
+<div class="d-flex justify-content-end">
+                        <button id="mybtn" type="submit" class="btn btn-primary mt-3 text-black  me-md-2"
+                            style="border-radius: 8px;">JOIN TODAY</button>
                         <span id="status"></span>
+                    </div>
                     </form>
                 </div>
             </div>
